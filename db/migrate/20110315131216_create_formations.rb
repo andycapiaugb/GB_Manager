@@ -1,7 +1,7 @@
 class CreateFormations < ActiveRecord::Migration
   def self.up
     create_table :formations do |t|
-      t.references :history
+      t.references :fiscal_year
       t.references :function
 
       t.timestamps

@@ -4,6 +4,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.references :person
       t.integer :number
       t.boolean :resigned
+      t.date :resigned_date
       t.text :resigned_reason
       t.boolean :retired
 

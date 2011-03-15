@@ -27,7 +27,43 @@
       <file leaf-file-name="20110315130153_create_fiscal_years.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20110315130153_create_fiscal_years.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+            <state line="13" column="3" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20110315131216_create_formations.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20110315131216_create_formations.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="31" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20110314152600_create_functions.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20110314152600_create_functions.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.4651163">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20110315115143_create_organizations.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20110315115143_create_organizations.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20110314140847_create_employees.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20110314140847_create_employees.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="27" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -51,28 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20110315135704_create_evaluation_competencies.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20110315135704_create_evaluation_competencies.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20110315135704_create_evaluation_competencies.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="0.18518518">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function_competency.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/function_competency.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="22" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formation.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/formation.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="22" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+            <state line="5" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,24 +114,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fiscal_year_test.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/unit/fiscal_year_test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fiscal_years.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/fixtures/fiscal_years.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -129,22 +129,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20110315103658_create_evaluations.rb" />
-        <option value="$PROJECT_DIR$/app/models/contract.rb" />
         <option value="$PROJECT_DIR$/app/models/evaluation.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110314105850_create_entities.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110315130153_create_histories.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20110315131216_create_formations.rb" />
         <option value="$PROJECT_DIR$/app/models/organization.rb" />
         <option value="$PROJECT_DIR$/app/models/formation.rb" />
         <option value="$PROJECT_DIR$/app/models/history.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20110315130153_create_fiscal_years.rb" />
         <option value="$PROJECT_DIR$/test/unit/fiscal_year_test.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110315135137_create_function_competencies.rb" />
         <option value="$PROJECT_DIR$/app/models/function_competency.rb" />
         <option value="$PROJECT_DIR$/app/models/function.rb" />
         <option value="$PROJECT_DIR$/app/models/competency.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110315135704_create_evaluation_competencies.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20110314140847_create_employees.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20110315130153_create_fiscal_years.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20110315131216_create_formations.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20110314152600_create_functions.rb" />
       </list>
     </option>
   </component>
@@ -586,20 +586,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110314140847_create_employees.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110314105109_create_people.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20110314105850_create_entities.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="20" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
@@ -607,30 +593,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110315115143_create_organizations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110315131216_create_formations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/organization.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="24" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110315130153_create_fiscal_years.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -652,13 +617,6 @@
     <entry file="file://$PROJECT_DIR$/app/models/formation.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="22" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/fiscal_year.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -693,7 +651,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20110315135704_create_evaluation_competencies.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="0.18518518">
+        <state line="5" column="22" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/fiscal_year.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="26" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110314140847_create_employees.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="27" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110315115143_create_organizations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110315130153_create_fiscal_years.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="3" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110315131216_create_formations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="31" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110314152600_create_functions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="355" selection-end="355" vertical-scroll-proportion="0.4651163">
           <folding />
         </state>
       </provider>

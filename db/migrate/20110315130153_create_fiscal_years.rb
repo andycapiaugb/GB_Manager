@@ -1,4 +1,4 @@
-class CreateFiscal_years < ActiveRecord::Migration
+class CreateFiscalYears < ActiveRecord::Migration
   def self.up
     create_table :fiscal_years do |t|
       t.references :organization

@@ -8,6 +8,9 @@ class CreateFunctions < ActiveRecord::Migration
       t.integer :level_id
       t.integer :category_id
       t.integer :performance
+      t.date :start
+      t.date :end
+      t.boolean :fading
 
       t.timestamps
     end
