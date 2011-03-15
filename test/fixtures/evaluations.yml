@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  contract_id: 1
+  evaluator_id: 1
+  date: 2011-03-15
+  results: MyString
+  info: MyText
+
+two:
+  contract_id: 1
+  evaluator_id: 1
+  date: 2011-03-15
+  results: MyString
+  info: MyText

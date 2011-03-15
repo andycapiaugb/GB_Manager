@@ -1,6 +1,6 @@
-class CreateEntities < ActiveRecord::Migration
+class CreateOrganizations < ActiveRecord::Migration
   def self.up
-    create_table :entities do |t|
+    create_table :organizations do |t|
       t.string :name
       t.string :phone
       t.string :email
@@ -8,13 +8,12 @@ class CreateEntities < ActiveRecord::Migration
       t.string :address
       t.string :postal_code
       t.string :town
-      t.string :kind #for example VZW, NV, BVBA, ...
 
       t.timestamps
     end
   end
 
   def self.down
-    drop_table :entities
+    drop_table :organizations
   end
 end

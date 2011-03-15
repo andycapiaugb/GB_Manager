@@ -10,7 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110314154141) do
+ActiveRecord::Schema.define(:version => 20110315103944) do
+
+  create_table "candidacies", :force => true do |t|
+    t.integer  "solicitation_id"
+    t.integer  "exam_id"
+    t.date     "date"
+    t.text     "results"
+    t.text     "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "competencies", :force => true do |t|
+    t.integer  "group_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contracts", :force => true do |t|
     t.integer  "employee_id"
@@ -58,6 +76,25 @@ ActiveRecord::Schema.define(:version => 20110314154141) do
     t.datetime "updated_at"
   end
 
+  create_table "evaluations", :force => true do |t|
+    t.integer  "contract_id"
+    t.integer  "evaluator_id"
+    t.date     "date"
+    t.string   "results"
+    t.text     "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exams", :force => true do |t|
+    t.integer  "function_id"
+    t.date     "date"
+    t.text     "results"
+    t.text     "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "functions", :force => true do |t|
     t.string   "name"
     t.integer  "formation_id"
@@ -92,6 +129,15 @@ ActiveRecord::Schema.define(:version => 20110314154141) do
   create_table "replacements", :force => true do |t|
     t.integer  "replacer_id"
     t.integer  "replaced_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "solicitations", :force => true do |t|
+    t.integer  "person_id"
+    t.date     "date"
+    t.text     "info"
+    t.integer  "diploma_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
