@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  competency_id: 1
+  function_id: 1
+  level: 1
+
+two:
+  competency_id: 1
+  function_id: 1
+  level: 1
