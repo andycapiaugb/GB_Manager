@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  formation_id: 1
+  regulation_id: 1
+  departnemt_id: 1
+  level_id: 1
+  category_id: 1
+  performance: 1
+
+two:
+  name: MyString
+  formation_id: 1
+  regulation_id: 1
+  departnemt_id: 1
+  level_id: 1
+  category_id: 1
+  performance: 1

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  function: MyString
+  joined: 2011-03-14
+  resigned: 2011-03-14
+  phone: MyString
+  email: MyString
+
+two:
+  function: MyString
+  joined: 2011-03-14
+  resigned: 2011-03-14
+  phone: MyString
+  email: MyString

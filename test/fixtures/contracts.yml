@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  employee_id: 1
+  function_id: 1
+  number: MyString
+  start: 2011-03-14
+  end: 2011-03-14
+  place_id: 1
+  prestation: 1
+  titular_id: 1
+
+two:
+  employee_id: 1
+  function_id: 1
+  number: MyString
+  start: 2011-03-14
+  end: 2011-03-14
+  place_id: 1
+  prestation: 1
+  titular_id: 1

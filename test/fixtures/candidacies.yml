@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  solicitation_id: 1
+  exam_id: 1
+  date: 2011-03-15
+  results: MyText
+  info: MyText
+
+two:
+  solicitation_id: 1
+  exam_id: 1
+  date: 2011-03-15
+  results: MyText
+  info: MyText

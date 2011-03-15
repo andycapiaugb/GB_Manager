@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  replacer_id: 1
+  replaced_id: 1
+
+two:
+  replacer_id: 1
+  replaced_id: 1

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  person_id: 1
+  number: 1
+  resigned: false
+  resigned_reason: MyText
+  retired: false
+
+two:
+  person_id: 1
+  number: 1
+  resigned: false
+  resigned_reason: MyText
+  retired: false
