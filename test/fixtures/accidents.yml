@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2011-03-15
+  description: MyText
+  invalidity: 1
+  status: MyString
+
+two:
+  date: 2011-03-15
+  description: MyText
+  invalidity: 1
+  status: MyString

@@ -4,7 +4,7 @@ class CreateEvaluations < ActiveRecord::Migration
       t.references :contract
       t.integer :evaluator_id
       t.date :date
-      t.string :results
+      t.string :result
       t.text :info
 
       t.timestamps

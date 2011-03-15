@@ -4,7 +4,7 @@ class CreateFunctions < ActiveRecord::Migration
       t.string :name
       t.integer :formation_id
       t.integer :regulation_id
-      t.integer :departnemt_id
+      t.integer :department_id
       t.integer :level_id
       t.integer :category_id
       t.integer :performance
