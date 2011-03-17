@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Employee Nr</th>
+    <th>Sex</th>
+    <th>Birthday</th>
+    <th>Address</th>
+  </tr>
+  <% @employees.each do |e| %>
+      <%  %>
+    <tr>
+        <td><%= link_to "#{e.person.first_name} #{e.person.last_name}", employee_url(e.id) %></td>
+        <td><%= e.number %></td>
+        <td></td>
+        <td><%= e.person.birthday %></td>
+        <td><%= "#{e.person.address}, #{e.person.postal_code} #{e.person.town}" %></td>
+      </tr>
+  <% end %>
+</table>

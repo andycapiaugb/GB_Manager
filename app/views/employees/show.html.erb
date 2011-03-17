@@ -1,0 +1,66 @@
+<div class="round">
+  <h3>Persoonsgegevens</h3>
+  <table>
+    <tr>
+      <th>Employeenumber</th>
+      <td><%= @employee.number %></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><%= @employee.name %></td>
+    </tr>
+    <tr>
+      <th>Sex</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Birthday</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Adres</th>
+      <td></td>
+    </tr>
+  </table>
+
+  <h3>Contractgegevens</h3>
+    <table>
+      <% @employee.contracts.each do |c| %>
+          <h5><%= c.function.name %></h5>
+          <tr>
+            <th>Start</th>
+            <td><%= c.start %></td>
+          </tr>
+          <tr>
+            <th>End</th>
+            <td><%= c.end %></td>
+          </tr>
+          <tr>
+            <% if not c.replacing.empty? %>
+                <th>Replaces</th>
+                <td>
+                  <% c.replacing.each do |r| %>
+                    <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+                  <% end %>
+                </td>
+            <% elsif not c.replacers.empty? %>
+                    <th>Replaced by</th>
+                    <td>
+                      <% c.replacers.each do |r| %>
+                        <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+                      <% end %>
+                    </td>
+            <% end %>
+          </tr>
+
+          <tr>
+            <th>Last Evaluation</th>
+            <% if e = c.evaluations.last %>
+                <td><%= "#{e.date}: #{e.info} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></td>
+            <% else %>
+                <td>Not yet evaluated</td>
+            <% end %>
+          </tr>
+      <% end %>
+    </table>
+</div>

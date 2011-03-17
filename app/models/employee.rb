@@ -4,4 +4,8 @@ class Employee < ActiveRecord::Base
   has_many :functions, :through => :contracts
   has_many :accidents
   has_many :irregular_performances
+
+  def name
+    "#{self.person.first_name} #{self.person.last_name}"
+  end
 end
