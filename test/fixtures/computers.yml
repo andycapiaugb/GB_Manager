@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  manufacturer_id: 1
+  model_id: 1
+  type_id: 1
+  serial: MyString
+  ip_address: MyString
+  hostname: MyString
+  dns: MyString
+  gateway: MyString
+  wins: MyString
+  operating_system_id: 1
+  ram_capacity: 1
+  hd_capacity: 1
+  file_format_id: 1
+  processor_id: 1
+  processor_capacity: 1
+  cd: false
+  dvd: false
+  floppy: false
+  screen_id: 1
+  software_installation_id: 1
+
+two:
+  manufacturer_id: 1
+  model_id: 1
+  type_id: 1
+  serial: MyString
+  ip_address: MyString
+  hostname: MyString
+  dns: MyString
+  gateway: MyString
+  wins: MyString
+  operating_system_id: 1
+  ram_capacity: 1
+  hd_capacity: 1
+  file_format_id: 1
+  processor_id: 1
+  processor_capacity: 1
+  cd: false
+  dvd: false
+  floppy: false
+  screen_id: 1
+  software_installation_id: 1

@@ -1,0 +1,24 @@
+<div class="field">
+  <%= f.label :person %>
+  <%= f.select(:person_id, Person.all.collect {|p| [ p.name_with_national_number, p.id ] }) %>
+</div>
+<div class="field">
+  <%= f.label "Employee Number" %>
+  <%= f.text_field :number %>
+</div>
+<div class="field">
+  <%= f.label :resigned %>
+  <%= f.check_box :resigned %>
+</div>
+<div class="field">
+  <%= f.label "Resignation Reason" %>
+  <%= f.text_area :resigned_reason %>
+</div>
+<div class="field">
+  <%= f.label "Resignation Date" %>
+  <%= f.date_select :resigned_date, {:include_blank => true} %>
+</div>
+<div class="field">
+  <%= f.label :retired %>
+  <%= f.check_box :retired %>
+</div>
