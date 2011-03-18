@@ -1,5 +1,10 @@
 GbManager::Application.routes.draw do
   resources :employees
+  resources :people
+
+  resources :contracts do
+    resources :evaluations
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

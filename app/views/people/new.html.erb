@@ -1,0 +1,7 @@
+<h1>Create New Person</h1>
+<%= form_for @person do |f| %>
+    <%= render "fields", :f => f %>
+    <div class="actions">
+      <%= f.submit :save %>
+    </div>
+<% end %>

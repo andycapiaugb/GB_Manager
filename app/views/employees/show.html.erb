@@ -23,7 +23,7 @@
     </tr>
   </table>
 
-  <h3>Contractgegevens</h3>
+  <h3>Contractgegevens</h3> <div><%= link_to "Evaluate", new_contract_evaluation_url %></div>
     <table>
       <% @employee.contracts.each do |c| %>
           <h5><%= c.function.name %></h5>

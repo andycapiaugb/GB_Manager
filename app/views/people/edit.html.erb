@@ -1,0 +1,7 @@
+<h1>Edit <%= @person.name %></h1>
+<%= form_for @person do |f| %>
+    <%= render "fields", :f => f %>
+    <div class="actions">
+      <%= f.submit :save %>
+    </div>
+<% end %>
