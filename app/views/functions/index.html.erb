@@ -1,0 +1,23 @@
+<h1>Functions</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Regulation</th>
+    <th>OSN</th>
+    <th>Level</th>
+    <th>Category</th>
+    <th>Performance</th>
+    <th></th>
+  </tr>
+  <% @functions.each do |f| %>
+    <tr>
+      <td><%= f.name %></td>
+      <td><%= f.regulation_id %></td>
+      <td><%= f.department_id %></td>
+      <td><%= f.level_id %></td>
+      <td><%= f.category_id %></td>
+      <td><%= f.performance %></td>
+      <td></td>
+    </tr>
+  <% end %>
+</table>

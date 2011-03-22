@@ -12,7 +12,11 @@ class PeopleController < ApplicationController
   end
 
   def create
-
+    @person = Person.new(params[:person])
+    if @person.save
+      flash[:notice] = "Person created :)"
+      redirect_to employees_url
+    end
   end
 
   def edit

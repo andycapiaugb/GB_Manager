@@ -1,0 +1,7 @@
+<h1>Edit Contract</h1>
+<%= form_for @contract do |f| %>
+    <%= render 'fields', :f => f %>
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+<% end %>

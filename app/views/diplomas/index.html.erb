@@ -1,0 +1,13 @@
+<h1>Diplomas</h1>
+<table>
+  <tr>
+    <th>Degree</th>
+    <th>Name</th>
+  </tr>
+  <% @diplomas.each do |d| %>
+      <tr>
+        <td><%= d.degree %></td>
+        <td><%= d.name %></td>
+      </tr>
+  <% end %>
+</table>

@@ -14,4 +14,8 @@ class Contract < ActiveRecord::Base
   def end_replacement!(replaced_contract)
     replacements.find_by_replaced_id(replaced_contract).destroy
   end
+
+  def description
+    "#{self.function.name unless self.function.nil?} - #{self.employee.name_with_employee_number unless self.employee.nil?}"
+  end
 end

@@ -4,7 +4,7 @@ class CreateSolicitations < ActiveRecord::Migration
       t.references :person
       t.date :date
       t.text :info
-      t.integer :diploma_id
+      t.references :diplomas
 
       t.timestamps
     end

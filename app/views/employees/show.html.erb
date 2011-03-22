@@ -23,10 +23,17 @@
     </tr>
   </table>
 
-  <h3>Contractgegevens</h3> <div><%= link_to "Evaluate", new_contract_evaluation_url %></div>
+  <h3>Contractgegevens</h3>
     <table>
       <% @employee.contracts.each do |c| %>
-          <h5><%= c.function.name %></h5>
+          <tr>
+            <th>
+              <h5><%= link_to "#{c.function.name}", contract_url(c) %></h5>
+            </th>
+            <td>
+             <%= link_to "Evaluate", new_contract_evaluation_url(c) %>
+            </td>
+          </tr>
           <tr>
             <th>Start</th>
             <td><%= c.start %></td>
@@ -56,7 +63,7 @@
           <tr>
             <th>Last Evaluation</th>
             <% if e = c.evaluations.last %>
-                <td><%= "#{e.date}: #{e.info} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></td>
+                <td><%= "#{e.date}: #{e.result} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></td>
             <% else %>
                 <td>Not yet evaluated</td>
             <% end %>

@@ -2,6 +2,7 @@ class CreateEvaluations < ActiveRecord::Migration
   def self.up
     create_table :evaluations do |t|
       t.references :contract
+      t.integer :type_id #functioneringsgesprek of evaluatiegesprek
       t.integer :evaluator_id
       t.date :date
       t.string :result

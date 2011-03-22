@@ -1,1 +1,22 @@
-<h1>New Evaluation for <%= @contract.name %></h1>
+<h1>New Evaluation for <%= @contract.function.name %> <%= @contract.employee.name %></h1>
+<%= form_for([@contract, @evaluation]) do |f| %>
+    <div class="field">
+      <%= f.label :date %>
+      <%= f.date_select :date, {:include_blank => true, :end_year => Time.now.year} %>
+    </div>
+    <div class="field">
+      <%= f.label :evaluator %>
+      <%= f.select(:evaluator_id, Employee.all.collect {|e| [ e.name_with_employee_number, e.id ]}, {:include_blank => true}) %>
+    </div>
+    <div class="field">
+      <%= f.label :result %>
+      <%= f.text_field :result %>
+    </div>
+    <div class="field">
+      <%= f.label :info %>
+      <%= f.text_area :info %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110315150952) do
+ActiveRecord::Schema.define(:version => 20110321133645) do
 
   create_table "accidents", :force => true do |t|
     t.integer  "employee_id"
@@ -40,6 +40,46 @@ ActiveRecord::Schema.define(:version => 20110315150952) do
     t.datetime "updated_at"
   end
 
+  create_table "computer_assignments", :force => true do |t|
+    t.integer  "employee_id"
+    t.integer  "computer_id"
+    t.date     "date"
+    t.text     "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "computer_manufacturers", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "computers", :force => true do |t|
+    t.integer  "manufacturer_id"
+    t.integer  "model_id"
+    t.boolean  "bit64"
+    t.string   "serial"
+    t.string   "ip_address"
+    t.string   "hostname"
+    t.string   "dns"
+    t.string   "gateway"
+    t.string   "wins"
+    t.integer  "operating_system_id"
+    t.integer  "ram_capacity"
+    t.integer  "hd_capacity"
+    t.integer  "file_format_id"
+    t.integer  "processor_id"
+    t.integer  "processor_capacity"
+    t.boolean  "cd"
+    t.boolean  "dvd"
+    t.boolean  "floppy"
+    t.integer  "screen_id"
+    t.integer  "software_installation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contracts", :force => true do |t|
     t.integer  "employee_id"
     t.integer  "function_id"
@@ -49,6 +89,19 @@ ActiveRecord::Schema.define(:version => 20110315150952) do
     t.integer  "place_id"
     t.integer  "performance"
     t.integer  "titular_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diploma_degrees", :force => true do |t|
+    t.string   "degree"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diplomas", :force => true do |t|
+    t.integer  "diploma_degrees_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -101,7 +154,7 @@ ActiveRecord::Schema.define(:version => 20110315150952) do
     t.integer  "contract_id"
     t.integer  "evaluator_id"
     t.date     "date"
-    t.string   "results"
+    t.string   "result"
     t.text     "info"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -142,13 +195,25 @@ ActiveRecord::Schema.define(:version => 20110315150952) do
     t.string   "name"
     t.integer  "formation_id"
     t.integer  "regulation_id"
-    t.integer  "departnemt_id"
+    t.integer  "department_id"
     t.integer  "level_id"
     t.integer  "category_id"
     t.integer  "performance"
     t.date     "start"
     t.date     "end"
     t.boolean  "fading"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "irregular_performances", :force => true do |t|
+    t.integer  "employee_id"
+    t.integer  "event_id"
+    t.date     "date"
+    t.string   "description"
+    t.time     "start"
+    t.time     "end"
+    t.text     "info"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -168,6 +233,7 @@ ActiveRecord::Schema.define(:version => 20110315150952) do
   create_table "people", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "sex"
     t.string   "phone"
     t.string   "email"
     t.string   "address"
@@ -187,6 +253,20 @@ ActiveRecord::Schema.define(:version => 20110315150952) do
   create_table "replacements", :force => true do |t|
     t.integer  "replacer_id"
     t.integer  "replaced_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "software_installations", :force => true do |t|
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "softwares", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "requirements"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

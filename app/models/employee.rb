@@ -10,4 +10,8 @@ class Employee < ActiveRecord::Base
   def name
     "#{self.person.first_name} #{self.person.last_name}"
   end
+
+  def name_with_employee_number
+    "#{self.name} (#{self.number})"
+  end
 end

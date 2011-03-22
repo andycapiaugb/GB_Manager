@@ -1,6 +1,8 @@
 GbManager::Application.routes.draw do
   resources :employees
   resources :people
+  resources :functions
+  resources :diplomas
 
   resources :contracts do
     resources :evaluations

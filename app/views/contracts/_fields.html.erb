@@ -1,0 +1,35 @@
+<div class="field">
+  <%= fields_for :replaced_contract do |contract_replacement_form| %>
+      <%= contract_replacement_form.label :replaces %>
+      <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}) %>
+  <% end %>
+</div>
+
+<div class="field">
+  <%= f.label :number %>
+  <%= f.text_field :number %>
+</div>
+<div class="field">
+  <%= f.label :function %>
+  <%= f.select(:function_id, Function.all.collect {|f| [ f.name, f.id ]}, {:include_blank => true}) %>
+</div>
+<div class="field">
+  <%= f.label :employee %>
+  <%= f.select(:employee_id, Employee.all.collect {|e| [ e.name_with_employee_number, e.id ]}, {:include_blank => true}) %>
+</div>
+<div class="field">
+  <%= f.label :start_date %>
+  <%= f.date_select :start, {:include_blank => true} %>
+</div>
+<div class="field">
+  <%= f.label :end_date %>
+  <%= f.date_select :end, {:include_blank => true} %>
+</div>
+<div class="field">
+  <%= f.label :performance %>
+  <%= f.text_field :performance %>
+</div>
+<div class="field">
+  <%= f.label :titular %>
+  <%= f.select(:titular_id, Employee.all.collect {|e| [ e.name_with_employee_number, e.id ] }, {:include_blank => true}) %>
+</div>

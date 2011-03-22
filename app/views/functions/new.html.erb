@@ -1,0 +1,22 @@
+<h1>New Function</h1>
+<%= form_for @function do |f| %>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :performance %>
+      <%= f.text_field :performance %>
+    </div>
+    <div class="field">
+      <%= f.label :start_date %>
+      <%= f.date_select :start, {:include_blank => true} %>
+    </div>
+    <div class="field">
+      <%= f.label :end_date %>
+      <%= f.date_select :end, {:include_blank => true} %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Save" %>
+    </div>
+<% end %>
