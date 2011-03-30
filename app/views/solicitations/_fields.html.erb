@@ -1,0 +1,20 @@
+<div class="field">
+  <%= f.label :person %>
+  <%= f.select(:person_id, Person.all.collect { |p| [p.name, p.id] }, {:include_blank => true}) %>
+</div>
+<div class="field">
+  <%= f.label :function %>
+  <%= f.select(:function_id, Function.all.collect { |f| [f.name, f.id] }, {:include_blank => true}) %>
+</div>
+<div class="field">
+  <%= f.label :date %>
+  <%= f.date_select :date, {:include_blank => true} %>
+</div>
+<div class="field">
+  <%= f.label :diploma %>
+  <%= f.select(:diploma_id, Diploma.all.collect { |d| [d.description, d.id] }, {:include_blank => true}) %>
+</div>
+<div class="field">
+  <%= f.label :info %>
+  <%= f.text_area :info %>
+</div>

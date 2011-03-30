@@ -6,7 +6,7 @@
   </tr>
   <% @diplomas.each do |d| %>
       <tr>
-        <td><%= d.degree %></td>
+        <td><%= d.degree.name %></td>
         <td><%= d.name %></td>
       </tr>
   <% end %>

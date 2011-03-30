@@ -14,6 +14,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :nationality
       t.string :birthplace
       t.date :birthday
+      t.boolean :deceased
       t.string :civil_status
       t.text :info
 

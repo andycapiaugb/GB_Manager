@@ -1,0 +1,7 @@
+<h1>New Solicitation</h1>
+<%= form_for @solicitation do |f| %>
+    <%= render "fields", :f => f %>
+    <div class="actions">
+      <%= f.submit :save %>
+    </div>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Solicitations</h1>
+<table>
+  <tr>
+    <th>Person</th>
+    <th>Date</th>
+    <th>Function</th>
+    <th>Diploma</th>
+  </tr>
+  <% @solicitations.each do |s| %>
+      <tr>
+        <td><%= s.person.name %></td>
+        <td><%= s.date %></td>
+        <td><%= s.function.name %></td>
+        <td><%= s.diploma.description %></td>
+      </tr>
+  <% end %>
+</table>

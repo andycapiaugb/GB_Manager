@@ -1,7 +1,7 @@
 class CreateDiplomas < ActiveRecord::Migration
   def self.up
     create_table :diplomas do |t|
-      t.references :diploma_degrees
+      t.references :degree
       t.string :name
 
       t.timestamps

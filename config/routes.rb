@@ -3,6 +3,7 @@ GbManager::Application.routes.draw do
   resources :people
   resources :functions
   resources :diplomas
+  resources :solicitations
 
   resources :contracts do
     resources :evaluations

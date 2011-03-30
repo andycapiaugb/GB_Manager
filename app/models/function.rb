@@ -1,4 +1,5 @@
 class Function < ActiveRecord::Base
+  has_many :solicitations
   has_many :contracts
   has_many :employees, :through => :contracts
   has_many :formations

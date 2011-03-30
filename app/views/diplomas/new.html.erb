@@ -2,7 +2,7 @@
 <%= form_for @diploma do |f| %>
     <div class="field">
       <%= f.label :diploma_degree %>
-      <%= f.select(:diploma_degrees_id, Degree.all.collect{|dd| [dd.degree, dd.id]}) %>
+      <%= f.select(:degrees_id, Degree.all.collect{|dd| [dd.name, dd.id]}, :include_blank => true) %>
     </div>
     <div class="field">
       <%= f.label :name %>

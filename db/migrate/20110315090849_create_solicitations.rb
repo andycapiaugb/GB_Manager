@@ -5,6 +5,7 @@ class CreateSolicitations < ActiveRecord::Migration
       t.date :date
       t.text :info
       t.references :diplomas
+      t.references :functions
 
       t.timestamps
     end
