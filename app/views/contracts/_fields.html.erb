@@ -9,7 +9,7 @@
 </div>
 <div class="field">
   <%= f.label :function %>
-  <%= f.select(:function_id, Function.all.collect {|f| [ f.name, f.id ]}, {:include_blank => true}) %>
+  <%= f.select(:function_id, Function.all.collect {|function| [ function.name, function.id ]}, {:include_blank => true}) %>
 </div>
 <div class="field">
   <%= f.label :employee %>
