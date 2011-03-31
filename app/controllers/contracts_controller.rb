@@ -9,14 +9,13 @@ class ContractsController < ApplicationController
 
   def new
     @contract = Contract.new
-    @contract.replacements.build
   end
 
   def create
     @contract = Contract.new(params[:contract])
     if @contract.save
       flash[:notice] = "Contract saved :)"
-      redirect_to employees_url
+      redirect_to employee_url(@contract.employee)
     end
   end
 
@@ -25,6 +24,10 @@ class ContractsController < ApplicationController
   end
 
   def update
-    
+    @contract = Contract.find(params[:id])
+    if @contract.update_attributes(params[:contract])
+      flash[:notice] = "Contract updated :)"
+      redirect_to employee_url(@contract.employee)
+    end
   end
 end
