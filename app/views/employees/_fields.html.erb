@@ -1,6 +1,6 @@
 <div class="field">
   <%= f.label :person %>
-  <%= f.select(:person_id, Person.all.collect {|p| [ p.name_with_national_number, p.id ] }) %>
+  <%= f.select(:person_id, Person.all.collect {|p| [ p.name_with_national_number, p.id ] }, :include_blank => true) %>
 </div>
 <div class="field">
   <%= f.label "Employee Number" %>

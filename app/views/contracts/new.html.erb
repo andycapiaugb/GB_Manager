@@ -1,6 +1,6 @@
 <h1>New Contract</h1>
 <%= form_for @contract do |f| %>
-    <%= render 'fields', {:f => f, :contract => @contract} %>
+    <%= render 'fields', :f => f, :contract => @contract %>
     <div class="actions">
       <%= f.submit "Save" %>
     </div>

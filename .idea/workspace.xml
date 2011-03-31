@@ -33,6 +33,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/employees/_fields.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="114" selection-start="159" selection-end="159" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="function.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/function.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,19 +87,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/contracts/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="2" column="20" selection-start="75" selection-end="75" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_fields.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/contracts/_fields.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="29" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.625">
+            <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.024958402">
               <folding />
             </state>
           </provider>
@@ -120,22 +129,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/diploma.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110321132053_create_diplomas.rb" />
         <option value="$PROJECT_DIR$/app/views/solicitations/_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/solicitations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/solicitations_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110314142535_create_contracts.rb" />
-        <option value="$PROJECT_DIR$/app/views/contracts/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/contract.rb" />
         <option value="$PROJECT_DIR$/app/helpers/contracts_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/contracts/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/employees/show.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/contracts/_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contracts/_replacement.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/contracts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/employees/_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/contracts/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/contracts/_fields.html.erb" />
       </list>
     </option>
   </component>
@@ -252,6 +261,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gb_manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gb_manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employees" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,16 +607,16 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/contracts_controller.rb</url>
+          <line>26</line>
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Ruby/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="435" column="0" selection-start="13360" selection-end="13360" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/people/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -649,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contracts/_fields.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="29" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contracts/_replacement.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
@@ -677,6 +701,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/employees/_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="114" selection-start="159" selection-end="159" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/contracts_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
@@ -686,7 +717,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contracts/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+        <state line="2" column="20" selection-start="75" selection-end="75" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contracts/_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.024958402">
           <folding />
         </state>
       </provider>

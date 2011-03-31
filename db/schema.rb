@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20110321133645) do
     t.integer  "exam_id"
     t.date     "date"
     t.text     "results"
+    t.boolean  "passed"
     t.text     "info"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -88,7 +89,6 @@ ActiveRecord::Schema.define(:version => 20110321133645) do
     t.date     "end"
     t.integer  "place_id"
     t.integer  "performance"
-    t.integer  "titular_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -152,6 +152,7 @@ ActiveRecord::Schema.define(:version => 20110321133645) do
 
   create_table "evaluations", :force => true do |t|
     t.integer  "contract_id"
+    t.integer  "type_id"
     t.integer  "evaluator_id"
     t.date     "date"
     t.string   "result"
@@ -244,6 +245,7 @@ ActiveRecord::Schema.define(:version => 20110321133645) do
     t.string   "nationality"
     t.string   "birthplace"
     t.date     "birthday"
+    t.boolean  "deceased"
     t.string   "civil_status"
     t.text     "info"
     t.datetime "created_at"
@@ -275,7 +277,8 @@ ActiveRecord::Schema.define(:version => 20110321133645) do
     t.integer  "person_id"
     t.date     "date"
     t.text     "info"
-    t.integer  "diploma_id"
+    t.integer  "diplomas_id"
+    t.integer  "functions_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
