@@ -7,8 +7,6 @@ class Contract < ActiveRecord::Base
   has_many :replacers, :through => :reverse_relationships, :source => :replacer
   has_many :evaluations
 
-  attr_accessor :should_destroy
-
   after_update :save_all_replacing
 
   def replaces!(replaced_contract)
@@ -36,11 +34,11 @@ class Contract < ActiveRecord::Base
 
   def save_all_replacing
     self.replacements.each do |r|
-      r.save(false)
+      if r.should_destroy?
+        r.destroy
+      else
+        r.save(false)
+      end
     end
-  end
-
-  def should_destroy?
-    should_destroy == 1
   end
 end
