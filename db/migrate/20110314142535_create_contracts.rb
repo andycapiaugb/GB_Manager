@@ -8,7 +8,6 @@ class CreateContracts < ActiveRecord::Migration
       t.date :end
       t.integer :place_id
       t.integer :performance
-      t.integer :titular_id #references employee
 
       t.timestamps
     end

@@ -29,7 +29,3 @@
   <%= f.label :performance %>
   <%= f.text_field :performance %>
 </div>
-<div class="field">
-  <%= f.label :titular %>
-  <%= f.select(:titular_id, Employee.all.collect {|e| [ e.name_with_employee_number, e.id ] }, {:include_blank => true}) %>
-</div>
