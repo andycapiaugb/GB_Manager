@@ -1,72 +1,52 @@
 <div class="round">
   <h3>Persoonsgegevens</h3>
-  <table>
-    <tr>
-      <th>Employeenumber</th>
-      <td><%= @employee.number %></td>
-    </tr>
-    <tr>
-      <th>Name</th>
-      <td><%= @employee.name %></td>
-    </tr>
-    <tr>
-      <th>Sex</th>
-      <td></td>
-    </tr>
-    <tr>
-      <th>Birthday</th>
-      <td></td>
-    </tr>
-    <tr>
-      <th>Adres</th>
-      <td></td>
-    </tr>
-  </table>
+  <div>
+    Employeenumber: <%= @employee.number %>
+  </div>
+  <div>
+    name: <%= @employee.name %>
+  </div>
+  <div>
+    Sex:
+  </div>
+  <div>
+    Birthday:
+  </div>
+  <div>
+    Address
+  </div>
 
   <h3>Contractgegevens</h3>
-    <table>
       <% @employee.contracts.each do |c| %>
-          <tr>
-            <th>
-              <h5><%= link_to "#{c.function.name}", contract_url(c) %></h5>
-            </th>
-            <td>
-             <%= link_to "Evaluate", new_contract_evaluation_url(c) %>
-            </td>
-          </tr>
-          <tr>
-            <th>Start</th>
-            <td><%= c.start %></td>
-          </tr>
-          <tr>
-            <th>End</th>
-            <td><%= c.end %></td>
-          </tr>
-          <tr>
-            <th>Replaces</th>
-            <td>
-              <% c.replacing.each do |r| %>
-                <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
-              <% end %>
-            </td>
-          </tr>
-          <tr>
-            <th>Replaced by</th>
-            <td>
-              <% c.replacers.each do |r| %>
-                <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
-              <% end %>
-            </td>
-          </tr>
+      <div class="contract">
+        <div>
+          <b><%= link_to "#{c.function.name}", contract_url(c) %></b> <%= link_to "Evaluate", new_contract_evaluation_url(c) %>
 
-          <tr>
-            <th>Last Evaluation</th>
-            <% if e = c.evaluations.last %>
-                <td><%= "#{e.date}: #{e.result} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></td>
-            <% else %>
-                <td>Not yet evaluated</td>
-            <% end %>
-          </tr>
+        </div>
+          <div>
+            Start: <%= c.start %>
+          </div>
+          <div>
+            End: <%= c.end %>
+          </div>
+          <div>
+            Replaces: <% c.replacing.each do |r| %>
+                                <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+                            <% end %>
+          </div>
+          <div>
+            Replaced by: <% c.replacers.each do |r| %>
+                                    <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+                                <% end %>
+          </div>
+          <div>
+            Last Evaluation: <% if e = c.evaluations.last %>
+                                        <span><%= "#{e.date}: #{e.result} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></span>
+                                    <% else %>
+                                        <span>Not yet evaluated</span>
+                                    <% end %>
+          </div>
+      </div>
       <% end %>
     </table>
 </div>
