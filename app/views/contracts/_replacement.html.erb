@@ -1,0 +1,9 @@
+<div class="replacement">
+    <%= fields_for "contract[replaced_contracts][]", replacement do |contract_replacement_form| %>
+        <div class="field">
+          <%= replacement.id %>
+          <%= contract_replacement_form.label :replaces %>
+          <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}) %> <%= link_to_function "remove", "this.up('.replacement').remove()" %>
+        </div>
+    <% end %>
+</div>

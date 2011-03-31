@@ -9,7 +9,7 @@ class ContractsController < ApplicationController
 
   def new
     @contract = Contract.new
-    2.times {@contract.replacements.build}
+    @contract.replacements.build
   end
 
   def create

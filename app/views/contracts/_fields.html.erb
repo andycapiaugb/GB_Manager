@@ -1,11 +1,7 @@
-<% contract.replacements.each do |replacement| %>
-  <%= fields_for "contract[replaced_contracts][]", replacement do |contract_replacement_form| %>
-    <div class="field">
-      <%= contract_replacement_form.label :replaces %>
-      <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}) %>
-    </div>
-  <% end %>
-<% end %>
+<div id="replacements">
+<%= render :partial => 'replacement', :collection => contract.replacements %>
+</div>
+<%= add_replacement_link "Add replacement" %>
 
 <div class="field">
   <%= f.label :number %>

@@ -1,50 +1,50 @@
 <div class="round">
   <h3>Persoonsgegevens</h3>
   <div>
-    Employeenumber: <%= @employee.number %>
+    <%= label_tag :employeenumber %> <%= @employee.number %>
   </div>
   <div>
-    name: <%= @employee.name %>
+    <%= label_tag :name %> <%= @employee.name %>
   </div>
   <div>
-    Sex:
+    <%= label_tag :sex %>
   </div>
   <div>
-    Birthday:
+    <%= label_tag :birthday %>
   </div>
   <div>
-    Address
+    <%= label_tag :address %>
   </div>
 
   <h3>Contractgegevens</h3>
       <% @employee.contracts.each do |c| %>
       <div class="contract">
         <div>
-          <b><%= link_to "#{c.function.name}", contract_url(c) %></b> <%= link_to "Evaluate", new_contract_evaluation_url(c) %>
+          <b><%= link_to "#{c.function.name}", edit_contract_url(c) %></b> <%= link_to "Evaluate", new_contract_evaluation_url(c) %>
 
         </div>
           <div>
-            Start: <%= c.start %>
+            <%= label_tag :start %> <%= c.start %>
           </div>
           <div>
-            End: <%= c.end %>
+            <%= label_tag :end %> <%= c.end %>
           </div>
           <div>
-            Replaces: <% c.replacing.each do |r| %>
-                                <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
-                            <% end %>
+            <%= label_tag :replaces %> <% c.replacing.each do |r| %>
+                                                            <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+                                                         <% end %>
           </div>
           <div>
-            Replaced by: <% c.replacers.each do |r| %>
-                                    <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
-                                <% end %>
+            <%= label_tag :replaced_by %> <% c.replacers.each do |r| %>
+                                                                    <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+                                                                <% end %>
           </div>
           <div>
-            Last Evaluation: <% if e = c.evaluations.last %>
-                                        <span><%= "#{e.date}: #{e.result} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></span>
-                                    <% else %>
-                                        <span>Not yet evaluated</span>
-                                    <% end %>
+            <%= label_tag :last_evaluation %> <% if e = c.evaluations.last %>
+                                                                        <span><%= "#{e.date}: #{e.result} (evaluated by:" %> <%= link_to e.evaluator.name, employee_url(e.evaluator.id) %><%= ")" %></span>
+                                                                    <% else %>
+                                                                        <span>Not yet evaluated</span>
+                                                                    <% end %>
           </div>
       </div>
       <% end %>
