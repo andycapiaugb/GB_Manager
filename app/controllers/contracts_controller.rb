@@ -9,12 +9,12 @@ class ContractsController < ApplicationController
 
   def new
     @contract = Contract.new
+    2.times {@contract.replacements.build}
   end
 
   def create
     @contract = Contract.new(params[:contract])
     if @contract.save
-      @contract.replaces!(Contract.find(params[:replaced_contract][:id]))
       flash[:notice] = "Contract saved :)"
       redirect_to employees_url
     end

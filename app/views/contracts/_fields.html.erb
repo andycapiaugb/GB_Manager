@@ -1,9 +1,11 @@
-<div class="field">
-  <%= fields_for :replaced_contract do |contract_replacement_form| %>
+<% contract.replacements.each do |replacement| %>
+  <%= fields_for "contract[replaced_contracts][]", replacement do |contract_replacement_form| %>
+    <div class="field">
       <%= contract_replacement_form.label :replaces %>
       <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}) %>
+    </div>
   <% end %>
-</div>
+<% end %>
 
 <div class="field">
   <%= f.label :number %>

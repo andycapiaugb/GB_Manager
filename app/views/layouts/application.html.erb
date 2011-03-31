@@ -15,10 +15,11 @@
     <div class="round"><%= image_tag "logo.gif", :class => "round" %> Personeelsbeheer</div> 
     <nav class="round">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><%= link_to "Nieuwe Persoon", new_person_url %></li>
+        <li><%= link_to "Werknemers", employees_url %></li>
+        <li><%= link_to "Nieuwe Werknemer", new_employee_url %></li>
+        <li><%= link_to "Nieuwe Functie", new_function_url %></li>
+        <li><%= link_to "Nieuw Contract", new_contract_url %></li>
       </ul>
     </nav>
   </header>

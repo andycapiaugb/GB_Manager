@@ -18,4 +18,10 @@ class Contract < ActiveRecord::Base
   def description
     "#{self.function.name unless self.function.nil?} - #{self.employee.name_with_employee_number unless self.employee.nil?}"
   end
+
+  def replaced_contracts=(replaced_contracts)
+    replaced_contracts.each do |replaced_contract|
+      self.replacements.build({:replacer_id => self.id, :replaced_id => replaced_contract[:id]})
+    end
+  end
 end

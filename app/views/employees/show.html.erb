@@ -43,21 +43,20 @@
             <td><%= c.end %></td>
           </tr>
           <tr>
-            <% if not c.replacing.empty? %>
-                <th>Replaces</th>
-                <td>
-                  <% c.replacing.each do |r| %>
-                    <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
-                  <% end %>
-                </td>
-            <% elsif not c.replacers.empty? %>
-                    <th>Replaced by</th>
-                    <td>
-                      <% c.replacers.each do |r| %>
-                        <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
-                      <% end %>
-                    </td>
-            <% end %>
+            <th>Replaces</th>
+            <td>
+              <% c.replacing.each do |r| %>
+                <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <th>Replaced by</th>
+            <td>
+              <% c.replacers.each do |r| %>
+                <%= link_to "#{r.employee.name}", employee_url(r.employee.id) %>
+              <% end %>
+            </td>
           </tr>
 
           <tr>
