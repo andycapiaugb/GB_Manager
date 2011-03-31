@@ -7,6 +7,10 @@ class Contract < ActiveRecord::Base
   has_many :replacers, :through => :reverse_relationships, :source => :replacer
   has_many :evaluations
 
+  attr_accessor :should_destroy
+
+  after_update :save_all_replacing
+
   def replaces!(replaced_contract)
     replacements.create!(:replaced_id => replaced_contract.id)
   end
@@ -21,7 +25,22 @@ class Contract < ActiveRecord::Base
 
   def replaced_contracts=(replaced_contracts)
     replaced_contracts.each do |replaced_contract|
-      self.replacements.build({:replacer_id => self.id, :replaced_id => replaced_contract[:id]})
+      if replaced_contract[:replacement_id].blank?
+        self.replacements.build({:replacer_id => self.id, :replaced_id => replaced_contract[:id]})
+      else
+        replacement = self.replacements.detect { |r| r.id == replaced_contract[:replacement_id].to_i }
+        replacement.replaced_id = replaced_contract[:id].to_i
+      end
     end
+  end
+
+  def save_all_replacing
+    self.replacements.each do |r|
+      r.save(false)
+    end
+  end
+
+  def should_destroy?
+    should_destroy == 1
   end
 end
