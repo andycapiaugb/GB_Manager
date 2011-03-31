@@ -12,6 +12,6 @@ class Employee < ActiveRecord::Base
   end
 
   def name_with_employee_number
-    "#{self.name} (#{self.number})"
+    "#{self.name unless self.nil?} (#{self.number unless self.nil?})"
   end
 end

@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="employee.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/employee.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+            <state line="14" column="66" selection-start="446" selection-end="446" vertical-scroll-proportion="0.336">
               <folding />
             </state>
           </provider>
@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_fields.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_fields.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/contracts/_fields.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.024958402">
+            <state line="14" column="26" selection-start="438" selection-end="438" vertical-scroll-proportion="-8.75">
               <folding />
             </state>
           </provider>
@@ -129,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20110321132053_create_diplomas.rb" />
         <option value="$PROJECT_DIR$/app/views/solicitations/_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/solicitations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/solicitations_controller.rb" />
@@ -144,6 +143,7 @@
         <option value="$PROJECT_DIR$/app/controllers/contracts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/employees/_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contracts/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/employee.rb" />
         <option value="$PROJECT_DIR$/app/views/contracts/_fields.html.erb" />
       </list>
     </option>
@@ -694,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/employee.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/employees/_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="114" selection-start="159" selection-end="159" vertical-scroll-proportion="-1.25">
@@ -724,7 +717,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contracts/_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.024958402">
+        <state line="14" column="26" selection-start="438" selection-end="438" vertical-scroll-proportion="-8.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/employee.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="66" selection-start="446" selection-end="446" vertical-scroll-proportion="0.336">
           <folding />
         </state>
       </provider>
