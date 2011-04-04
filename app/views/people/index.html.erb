@@ -1,0 +1,15 @@
+<h2>People</h2>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>National Number</th>
+  </tr>
+  <% @people.each do |p| %>
+      <tr>
+        <td><%= link_to p.first_name, edit_person_url(p.id) %></td>
+        <td><%= link_to p.last_name, edit_person_url(p.id) %></td>
+        <td><%= p.national_number %></td>
+      </tr>
+  <% end %>
+</table>

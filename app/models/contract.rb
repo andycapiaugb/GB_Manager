@@ -26,7 +26,7 @@ class Contract < ActiveRecord::Base
   def replaced_contracts=(replaced_contracts)
     replaced_contracts.each do |replaced_contract|
       if replaced_contract[:replacement_id].blank?
-        replaces!(replaced_contract[:id].to_i)
+        self.replacement_contracts.build({:replacer_id => self.id, :replaced_id => replaced_contract[:id]})
       else
         replacement = self.replacement_contracts.detect { |r| r.id == replaced_contract[:replacement_id].to_i }
         replacement.replaced_id = replaced_contract[:id].to_i
