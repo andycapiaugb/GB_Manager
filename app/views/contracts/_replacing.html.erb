@@ -1,16 +1,17 @@
 <div class="replacement">
     <%= fields_for "contract[replaced_contracts][]", replacing do |contract_replacement_form| %>
         <div class="field">
-          <%= contract_replacement_form.label :replaces %>
+        <%= contract_replacement_form.label :replaces %>
           <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}, :index => nil) %>
           <% if replacing.new_record? %>
             <%= link_to_function "remove", "this.up('.replacement').remove()" %>
           <% else %>
             <%= link_to_function "remove", "mark_for_destroy(this)" %>
-            <%= contract_replacement_form.hidden_field :replacement_id, :value => replacing.reverse_relationships.find_by_replaced_id(replacing.id).id, :index => nil %>
-            <%= fields_for "contract[replaced_contracts][]", replacing.reverse_relationships.find_by_replaced_id(replacing.id) do |replacement_form| %>
-                <%= replacement_form.hidden_field :should_destroy, :index => nil, :class => "should_destroy" %>
-            <% end %>
+            <%= contract_replacement_form.text_field :replacement_id, :value => replacing.replaced_contracts.find_by_replaced_id(replacing.id).id, :index => nil %>
+            <%= contract_replacement_form.hidden_field :should_destroy_replacement, :index => nil, :class => "should_destroy_relationship" %>
+            <%= fields_for replacing.replaced_contracts.find_by_replaced_id(replacing.id) do |test| %>
+                 <%= test.hidden_field :should_destroy, :class => "should_destroy"  %>
+             <% end %>
           <% end %>
         </div>
     <% end %>
