@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110321133645) do
+ActiveRecord::Schema.define(:version => 20110405073931) do
 
   create_table "accidents", :force => true do |t|
     t.integer  "employee_id"
@@ -248,6 +248,15 @@ ActiveRecord::Schema.define(:version => 20110321133645) do
     t.boolean  "deceased"
     t.string   "civil_status"
     t.text     "info"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relatives", :force => true do |t|
+    t.integer  "relator_id"
+    t.integer  "related_id"
+    t.string   "kind"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
