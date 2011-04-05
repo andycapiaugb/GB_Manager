@@ -1,8 +1,15 @@
 <div class="replacement">
-    <%= fields_for "contract[replaced_contracts][]", replacement do |contract_replacement_form| %>
+    <%= fields_for "contract[replaced_contracts][]", replacement.replaced do |contract_replacement_form| %>
         <div class="field">
-          <%= contract_replacement_form.label :replaces %>
-          <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}) %> <%= link_to_function "remove", "this.up('.replacement').remove()" %>
+        <%= contract_replacement_form.label :replaces %>
+          <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}, :index => nil) %>
+          <% if replacing_test.replaced.new_record? %>
+            <%= link_to_function "remove", "this.up('.replacement').remove()" %>
+          <% else %>
+            <%= link_to_function "remove", "mark_for_destroy(this)" %>
+            <%= contract_replacement_form.hidden_field :replacement_id, :value => replacement.id, :index => nil %>
+            <%= contract_replacement_form.hidden_field :should_destroy_replacement, :index => nil, :class => "should_destroy" %>
+          <% end %>
         </div>
     <% end %>
 </div>

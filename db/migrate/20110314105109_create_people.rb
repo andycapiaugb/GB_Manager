@@ -11,9 +11,14 @@ class CreatePeople < ActiveRecord::Migration
       t.string :town
       t.string :national_number
       t.string :account
+      t.string :iban
+      t.string :bic
       t.string :nationality
-      t.string :birthplace
       t.date :birthday
+      t.string :birthplace
+      t.string :motherland
+      t.string :language
+      t.integer :disablement
       t.boolean :deceased
       t.string :civil_status
       t.text :info
