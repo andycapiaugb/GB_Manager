@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110405073931) do
+ActiveRecord::Schema.define(:version => 20110405142511) do
 
   create_table "accidents", :force => true do |t|
     t.integer  "employee_id"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(:version => 20110405073931) do
     t.text     "description"
     t.integer  "invalidity"
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "attached_competencies", :force => true do |t|
+    t.integer  "competencable_id"
+    t.string   "competencable_type"
+    t.integer  "competency_id"
+    t.integer  "level"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -142,14 +151,6 @@ ActiveRecord::Schema.define(:version => 20110405073931) do
     t.datetime "updated_at"
   end
 
-  create_table "evaluation_competencies", :force => true do |t|
-    t.integer  "competency_id"
-    t.integer  "evaluation_id"
-    t.integer  "level"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "evaluations", :force => true do |t|
     t.integer  "contract_id"
     t.integer  "type_id"
@@ -180,14 +181,6 @@ ActiveRecord::Schema.define(:version => 20110405073931) do
   create_table "formations", :force => true do |t|
     t.integer  "fiscal_year_id"
     t.integer  "function_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "function_competencies", :force => true do |t|
-    t.integer  "competency_id"
-    t.integer  "function_id"
-    t.integer  "level"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -242,9 +235,14 @@ ActiveRecord::Schema.define(:version => 20110405073931) do
     t.string   "town"
     t.string   "national_number"
     t.string   "account"
+    t.string   "iban"
+    t.string   "bic"
     t.string   "nationality"
-    t.string   "birthplace"
     t.date     "birthday"
+    t.string   "birthplace"
+    t.string   "motherland"
+    t.string   "language"
+    t.integer  "disablement"
     t.boolean  "deceased"
     t.string   "civil_status"
     t.text     "info"

@@ -1,9 +1,10 @@
+<% replacement.replaced.nil? ? form_object = Contract.new : form_object = replacement.replaced %>
 <div class="replacement">
-    <%= fields_for "contract[replaced_contracts][]", replacement.replaced do |contract_replacement_form| %>
+    <%= fields_for "contract[replaced_contracts][]", form_object do |contract_replacement_form| %>
         <div class="field">
         <%= contract_replacement_form.label :replaces %>
           <%= contract_replacement_form.select(:id, Contract.all.collect {|p| [ p.description, p.id ] }, {:include_blank => true}, :index => nil) %>
-          <% if replacing_test.replaced.new_record? %>
+          <% if form_object.new_record? %>
             <%= link_to_function "remove", "this.up('.replacement').remove()" %>
           <% else %>
             <%= link_to_function "remove", "mark_for_destroy(this)" %>
